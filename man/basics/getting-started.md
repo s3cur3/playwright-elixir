@@ -27,8 +27,7 @@ Once installed, you can `alias` and/or `import` Playwright in your Elixir module
 
 ```elixir
 browser = Playwright.launch(:chromium)
-page =
-  browser |> Playwright.Browser.new_page()
+page = Playwright.Browser.new_page(browser)
 
 page
   |> Playwright.Page.goto("http://example.com")
